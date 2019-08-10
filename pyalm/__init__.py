@@ -71,12 +71,13 @@ def _attempt_key_load():
 		vals = fd.read().splitlines()
 		pyalm.config.APIS = dict(iter([i.split("=") for i in vals]))
 	except IOError as e:
-		if e.errno != 2:
-			warnings.warn('pyalm file %s exists but could not be opened: %s' % (
-				pyalm.config.PYALM_LOCATION, str(e)))
+		pass
+		# if e.errno != 2:
+			# warnings.warn('pyalm file %s exists but could not be opened: %s' % (
+			# 	pyalm.config.PYALM_LOCATION, str(e)))
 	try:
 		pyalm.config.APIS = _get_env_vars()
 	except KeyError as e:
 		pass
 
-_attempt_key_load()
+# _attempt_key_load()

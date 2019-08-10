@@ -292,6 +292,7 @@ def get_alm(identifiers=None,
                   'page': page,
                   'api_key': config.APIS.get(instance).get('key'),
     }
+    print config.APIS
 
     url = config.APIS.get(instance).get('url')
     if url:
@@ -308,8 +309,6 @@ def get_alm(identifiers=None,
 
         return { "meta": meta, "articles": articles }
 
-    else:
-        raise
 
 def _process_json_to_article(article_json):
     article = ArticleALM(article_json)

@@ -3,6 +3,6 @@
 # For other instances you will need to contact the manager of that instance.
 import os
 
-API_KEY = { 'plos'       : os.environ['PLOS_API_KEY'],
+API_KEY = { 'plos'       : 'YOUR API KEY GOES HERE',
             'ojs'        : 'YOUR API KEY GOES HERE',
             'copernicus' : 'YOUR API KEY GOES HERE'}
